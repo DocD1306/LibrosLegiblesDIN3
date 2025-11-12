@@ -8,27 +8,36 @@ Así evitamos sobrecargar los componentes con clases de Tailwind en el className
 ========================== 
 */
 
+/* Estilos para el catálogo de libros */
 .catalogue {
-  @apply grid gap-4 justify-around mx-auto mt-8;
+  @apply grid gap-7 justify-around mx-auto mt-8;
 
   /* Valores que no se pueden aplicar con @apply */
   grid-template-columns: repeat(auto-fit, 300px);
-  max-width: calc(300px * 5 + 1rem * 4);
+  max-width: calc(300px * 5 + 1rem * 12);
 }
 
+/* Estilos para la sección del título de la página */
+.page_title_section{
+  @apply pb-3 pl-5;
+}
 
+/* Estilos para las tarjetas de los libros */
 .book_card{
    @apply bg-white border border-gray-200 rounded-lg p-4 transition-transform hover:scale-[1.02] shadow-[0px_0px_20px_rgba(0,0,0,0.30)] w-[300px];
 }
 
+/* Estilos para el contenedor principal */
 .main_content{
-  @apply min-h-screen p-4 p-10;
+  @apply min-h-screen py-10 px-10;
 }
 
+/* Estilos para las imágenes de los libros */
 .book_image{
   @apply h-full w-full object-cover;
 }
 
+/* Contenedor de la imagen del libro */
 .book_card_image_containter{
   @apply h-[400px] w-full overflow-hidden;
 }

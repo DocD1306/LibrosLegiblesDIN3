@@ -1,9 +1,12 @@
 function Book(props) {
 
-    const {title, image} = props;
-
+    /* Desestructuración de las props */
+    const {title, image, synopsis} = props;
 
     /*
+    Este componente representa una tarjeta individual de un libro, contiene la imagen, el título y la sinopsis del libro.
+
+    Elementos de accesibilidad incluidos:
     tabIndex sirve para la navegación con tabulador
     aria-label es sirve para la accesibilidad por audio
 
@@ -18,7 +21,8 @@ function Book(props) {
                 <figcaption className="sr-only">{title}</figcaption>
             </figure>
 
-            <p className="text_normal">{title}</p>
+            <p className="text_normal_bold pt-3">{title}</p>
+            <p className="text_small color_grey_2 pt-2">{synopsis}</p>
         
         </article>
     )
