@@ -1,5 +1,5 @@
-import books from "./data/books.js"
-import Book from "./Book.jsx"
+import books from "../data/books.js"
+import Book from "../components/Book.jsx"
 
 function Catalogue(){
 
@@ -10,7 +10,7 @@ function Catalogue(){
     return (
         <> 
             <section className="page_title_section">
-                <h1 className="heading_h1">Catálogo de libros</h1>
+                <h1 className="heading_h1 color_primary">Catálogo de libros</h1>
                 <p className="text_normal color_grey_2 pt-2 pl-1">Disfruta de una infinidad de historias</p>
             </section>
             <section className="catalogue w-full">

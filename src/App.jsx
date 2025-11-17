@@ -1,19 +1,20 @@
-import './index.css'
-import Catalogue from "./Catalogue.jsx"
-import MainContent from "./MainContent.jsx"
+import './assets/styles/index.css'
+import Catalogue from "./pages/Catalogue.jsx"
+import { Routes, Route, Navigate } from 'react-router-dom';
+import NavigationBar from './components/NavigationBar.jsx';
+import Home from './pages/Home.jsx';
 
 function App() {
 
-  /*
-  Para la estructura de mi aplicación, he decidido no pasarle el array de libros desde app para mantener la limpieza del código.
-  Mi idea es que dentro de App.jsx se llame a la cabecera (cosa que todavía no se ha pedido), al MainContent y al pie de página (tampoco se ha pedido todavía).
-  Luego, dentro de MainContent se llamará al catálogo y este será el que llame al array de libros, evitando sobrecargar un único componente con demasiado código.
-  */
   return (
     <>
-        <MainContent>
-          <Catalogue/>
-        </MainContent>
+        <Routes>
+            <Route path="/" element={<NavigationBar />} >
+                <Route index element={<Home />} />
+                <Route path="catalogue" element={<Catalogue />} />
+                <Route path="*" element={<Navigate to="/" replace />} />
+            </Route>
+        </Routes>
     </>
   )
 }

@@ -8,6 +8,21 @@ Así evitamos sobrecargar los componentes con clases de Tailwind en el className
 ========================== 
 */
 
+/* Estilos para los enlaces de navegación */
+.navigation_links {
+  @apply flex gap-10
+}
+
+/* Estilos para el logo y el título en la barra de navegación */
+.logo_and_title{
+  @apply flex justify-between items-center gap-1;
+}
+
+/* Estilos para la barra de navegación */
+.navigation_bar {
+  @apply w-full bg-(--colorprimary) p-2 flex justify-between items-center pr-10 pl-5
+}
+
 /* Estilos para el catálogo de libros */
 .catalogue {
   @apply grid gap-7 justify-around mx-auto mt-8;
@@ -146,12 +161,6 @@ Esto cambia los ajustes de todas las tipografías para que no tengamos que dupli
   font-family: var(--font-family);
   font-style: var(--font-style);
   letter-spacing: var(--letter-spacing);
-}
-
-/* Por defecto todos los encabezados tienen el color primario */
-
-[class^="heading_"] {
-  color: var(--color-primary);
 }
 
 /* 

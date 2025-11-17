@@ -21,7 +21,7 @@ function Book(props) {
                 <figcaption className="sr-only">{title}</figcaption>
             </figure>
 
-            <p className="text_normal_bold pt-3">{title}</p>
+            <p className="text_normal_bold pt-3 color_primary">{title}</p>
             <p className="text_small color_grey_2 pt-2">{synopsis}</p>
         
         </article>
