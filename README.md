@@ -5,27 +5,54 @@ Alumno:
 
 ---
 
-## Catálogo de libros
+## Elementos de la página web y pruebas de accesibilidad
 
-Aquí podemos ver el catálogo a tamaño estándar de ordenador:
 
-<img src="./imagenes_readme/catalogo.png" alt="Catálogo de libros" width="800"/>
+Aquí podemos ver la barra de navegación de la página web, esta cambia de tamaño en los textos y el icono según va disminuyendo el tamaño. Además, cuando se hace lo suficientemente pequeño (tamaño tablet o móvil), aparece un menú de hamburguesa para facilitar la navegación en pantallas pequeñas.
+
+Todos estos elementos son navegables por tabulación
+
+<img src="./imagenes_readme/navegacion.png" alt="barra de navegación" width="600"/>
 
 <br>
-En esta imágen podemos ver el catálogo en dispositivos móviles (en este caso se simula el tamaño de pantalla de un Samsung):
 
+<img src="./imagenes_readme/navegacion_pequenya_cerrada.png" alt="barra de navegación pequeña" width="300"/>
 
-<img src="./imagenes_readme/catalogo_movil.png" alt="Catálogo de libros en móvil" width="300"/>
+<br>
 
+<img src="./imagenes_readme/navegacion_pequenya_abierta.png" alt="barra de navegación pequeña abierta" width="300"/>
 
-También podemos ver elementos de accesiblidad como un link para saltar al contenido principal:
+<br>
 
-<img src="./imagenes_readme/link_contenido_principal.png" alt="Saltar al contenido principal" width="500"/>
+También podemos ver que existe la misma barra de navegación para usuarios no autenticados. Se puede alternar entre ambas cambiando la variable isAuthenticated en el archivo app.js
 
-Además, se se puede navegar por el catálogo utilizando solo el teclado mediante la tecla "Tab":
+<img src="./imagenes_readme/navegacion_no_autenticado.png" alt="barra de navegación admin" width="600"/>
 
-<img src="./imagenes_readme/navegar_tab.png" alt="Navegación con teclado" width="800"/>
+<br>
 
-Por último, se ha comprobado que el lector de pantalla funciona correctamente:
+Aquí está el pie de página.
 
-<img src="./imagenes_readme/lector-pantalla.png" alt="Lector de pantalla" width="600"/>
+<img src="./imagenes_readme/pie_pagina.png" alt="footer" width="600"/>
+
+<br>
+
+Este es el catálogo de libros. También navegable por teclado y funcional para el lector de pantalla (como los demás elementos de la página)
+
+<img src="./imagenes_readme/catalogo.png" alt="catalogo de libros" width="600"/>
+
+<br>
+
+<img src="./imagenes_readme/lector_pantalla.png" alt="catalogo de libros lector pantalla" width="600"/>
+
+<br>
+
+Por otra parte también hay un link que nos permite saltar al contenido principar de la página para no tener que pasar por todos los elementos de la barra de navegación.
+
+<img src="./imagenes_readme/link_contenido_principal.png" alt="saltar al contenido" width="600"/>
+
+<br>
+
+También existe una página de detalle para los libros. Esta contiene un botón para volver al elemento anterior. Y libros recomendados en la parte inferior.
+
+<img src="./imagenes_readme/detalle.png" alt="detalle libro" width="600"/>
+

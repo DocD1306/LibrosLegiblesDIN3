@@ -11,35 +11,25 @@ function AdminNavigationBar() {
     return (
         <>
             <header>
-                {/* Añadimos 'aria-label' al nav para identificar esta navegación específica 
-                    si hubiera más de una en la página (ej: footer, sidebar).
-                    
-                    Añadido 'relative' para que el menú desplegable absoluto se posicione respecto a este contenedor.
-                */}
                 <nav className="navigation_bar background_color_primary relative" aria-label="Navegación principal">
 
                     {/* Enlace al inicio. */}
                     <Link to="/" className="logo_and_title z-50">
-                        {/* Imagen responsive:
-                            - w-[40px] h-[40px]: Tamaño para móvil/tablet.
-                            - lg:w-[60px] lg:h-[60px]: Tamaño original para escritorio.
-                        */}
                         <img 
                             src={logo} 
                             alt="Libros Legibles Logo" 
                             className="w-[40px] h-[40px] lg:w-[60px] lg:h-[60px] transition-all duration-300 rounded-full" 
                         />
-                        {/* Texto responsive mediante media queries en CSS */}
                         <h1 className="heading_h3 color_white transition-all duration-300">
                             LibrosLegibles
                         </h1>
                     </Link>
 
-                    {/* Mejoras de Accesibilidad en el Botón:
-                        1. type="button": Previene comportamientos inesperados de submit.
-                        2. aria-label: Describe la acción para usuarios que no ven el icono "☰".
-                        3. aria-expanded: Informa al lector de pantalla si el menú está abierto (true) o cerrado (false).
-                        4. aria-controls: Vincula este botón con el menú que controla mediante su ID.
+                    {/* 
+                        type="button": Previene comportamientos inesperados de submit.
+                        aria-label: Describe la acción para usuarios que no ven el icono 
+                        aria-expanded: Informa al lector de pantalla si el menú está abierto (true) o cerrado (false).
+                        aria-controls: Vincula este botón con el menú que controla mediante su ID.
                     */}
                     <button 
                         type="button"

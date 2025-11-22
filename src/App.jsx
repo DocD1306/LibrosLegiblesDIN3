@@ -9,7 +9,7 @@ import Detail from './pages/Detail.jsx';
 
 function App() {
 
-  const isAuthenticated = true; // Cambia esto a true o false para simular un usuario autenticado
+  const isAuthenticated = false; // Cambia esto a true o false para simular un usuario autenticado
 
   return (
     <>
