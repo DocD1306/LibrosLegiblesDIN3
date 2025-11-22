@@ -2,6 +2,7 @@ import { Outlet, Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import MainContent from "./MainContent.jsx";
 import logo from '../assets/images/LibrosLegiblesLogo.png'
+import Footer from "./Footer.jsx";
 
 
 function NavigationBar() {
@@ -114,6 +115,7 @@ function NavigationBar() {
             <MainContent>
                 <Outlet />  
             </MainContent>
+            <Footer/>
         </>
     );
 }

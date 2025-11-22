@@ -20,7 +20,7 @@ Así evitamos sobrecargar los componentes con clases de Tailwind en el className
 
 /* Estilos para la barra de navegación */
 .navigation_bar {
-  @apply w-full bg-(--colorprimary) p-2 flex justify-between items-center pr-10 pl-5
+  @apply w-full bg-(--colorprimary) p-2 flex justify-between items-center pr-5 lg:pr-10 pl-5
 }
 
 /* Estilos para el catálogo de libros */

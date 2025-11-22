@@ -2,7 +2,7 @@ import { Outlet, Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import MainContent from "./MainContent.jsx";
 import logo from '../assets/images/LibrosLegiblesLogo.png'
-
+import Footer from "./Footer.jsx";
 
 function AdminNavigationBar() {
     /* Estado para controlar la apertura/cierre del menú móvil */
@@ -125,6 +125,7 @@ function AdminNavigationBar() {
             <MainContent>
                 <Outlet />  
             </MainContent>
+            <Footer/>
         </>
     );
 }
