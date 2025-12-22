@@ -67,6 +67,51 @@ Así evitamos sobrecargar los componentes con clases de Tailwind en el className
   @apply h-[400px] w-full overflow-hidden;
 }
 
+/* ==========================
+ESTRUCTURA DE FORMULARIOS
+Solo layout, espaciado y comportamiento. Sin colores de tema ni fuentes.
+========================== */
+
+.form_card {
+  @apply w-full max-w-lg p-8 rounded-2xl shadow-[0px_0px_20px_rgba(0,0,0,0.10)] border border-gray-100 mx-auto;
+}
+
+.form_group {
+  @apply flex flex-col gap-2;
+}
+
+.form_label {
+  @apply ml-1 block;
+}
+
+.form_input {
+  @apply w-full p-3 rounded-lg border focus:outline-none focus:ring-2 focus:border-transparent transition-all duration-200;
+}
+
+.form_input_base {
+    @apply border-gray-300 focus:ring-[var(--color-primary)];
+}
+
+.form_input_error_state {
+    @apply border-red-500 focus:ring-red-500;
+}
+
+.form_error_message {
+  @apply ml-1 animate-pulse;
+}
+
+.form_button {
+  @apply w-full py-3 px-6 rounded-lg shadow-md transition-all duration-300 transform active:scale-95 mt-4;
+}
+
+.form_button_active_effects {
+  @apply hover:opacity-90 hover:shadow-lg;
+}
+
+.form_button_disabled_effects {
+  @apply cursor-not-allowed opacity-50;
+}
+
 /* 
 ==========================
 Colores. Se diferencia de los colores de fondo para que también puedan ser utilizados en textos.
