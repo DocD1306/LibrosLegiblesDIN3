@@ -4,8 +4,21 @@ import MainContent from "./MainContent.jsx";
 import logo from '../assets/images/LibrosLegiblesLogo.png'
 import Footer from "./Footer.jsx";
 
+/**
+ * Administrative navigation bar component.
+ * * This component handles the main layout of the admin section, including the 
+ * responsive navigation header, the mobile menu toggle logic, and the 
+ * primary application wrapper using `MainContent` and `Footer`.
+ *
+ * @component
+ * @returns {JSX.Element} The administrative layout structure.
+ */
 function AdminNavigationBar() {
-    /* Estado para controlar la apertura/cierre del menú móvil */
+    
+    /**
+     * State to control the opening/closing of the mobile menu.
+     * @type {[boolean, function]}
+     */
     const [open, setOpen] = useState(false);
 
     return (
@@ -25,8 +38,7 @@ function AdminNavigationBar() {
                         </h1>
                     </Link>
 
-                    {/* 
-                        type="button": Previene comportamientos inesperados de submit.
+                    {/* type="button": Previene comportamientos inesperados de submit.
                         aria-label: Describe la acción para usuarios que no ven el icono 
                         aria-expanded: Informa al lector de pantalla si el menú está abierto (true) o cerrado (false).
                         aria-controls: Vincula este botón con el menú que controla mediante su ID.

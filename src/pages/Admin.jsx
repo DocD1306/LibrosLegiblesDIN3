@@ -1,10 +1,31 @@
 import { useState } from "react";
 
-
+/**
+ * Admin view component for adding new books to the system.
+ * * This component manages a multi-field form, performs real-time and 
+ * submission-based validation, and handles accessibility through ARIA attributes 
+ * and automatic focus management on errors.
+ *
+ * @component
+ * @returns {JSX.Element} A container with a book creation form.
+ */
 function Admin(){
 
+    /**
+     * State object containing validation error messages.
+     * @type {Object.<string, string>}
+     */
     const [errors, setErrors] = useState({}); 
 
+    /**
+     * Form data state containing book details.
+     * @type {Object}
+     * @property {string} title - The book title.
+     * @property {string} genre - The book genre.
+     * @property {string|number} price - The retail price.
+     * @property {string} image - URL of the book cover.
+     * @property {string} synopsis - Detailed description of the book.
+     */
     const [formData, setFormData] = useState({
         title: "",
         genre: "",
@@ -13,6 +34,10 @@ function Admin(){
         synopsis: ""
     });
 
+    /**
+     * Updates the form data state and clears the specific field error when the user types.
+     * @param {React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>} e - The change event.
+     */
     const handleChange = (e) => {
 
         const { id, value } = e.target;
@@ -30,6 +55,10 @@ function Admin(){
 
     }
 
+    /**
+     * Validates the form data and handles the submission process.
+     * @param {React.FormEvent<HTMLFormElement>} e - The form submission event.
+     */
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -222,7 +251,7 @@ function Admin(){
                             }
                         `}
                     >
-                        Enviar
+                        Añadir
                     </button>
 
                 </form>

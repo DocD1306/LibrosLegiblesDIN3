@@ -1,3 +1,15 @@
+/**
+ * Individual card component representing a book.
+ * * This component displays the book's cover image, title, and synopsis 
+ * within an accessible article structure.
+ *
+ * @component
+ * @param {Object} props - Component properties.
+ * @param {string} props.title - The title of the book.
+ * @param {string} props.image - The URL path for the book's cover image.
+ * @param {string} props.synopsis - A brief summary or description of the book.
+ * @returns {JSX.Element} A card-style article containing book details.
+ */
 function Book(props) {
 
     /* Desestructuración de las props */

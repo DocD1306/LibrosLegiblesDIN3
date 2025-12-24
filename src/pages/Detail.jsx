@@ -3,20 +3,49 @@ import books from "../data/books.js";
 import Book from "../components/Book.jsx";
 import { useEffect } from "react";
 
+/**
+ * Detailed view component for a specific book.
+ * * This component retrieves a book ID from the URL parameters, fetches the book's 
+ * specific data, and renders a detailed layout. It also includes a "Related Books" 
+ * section with a randomized selection of other titles.
+ *
+ * @component
+ * @returns {JSX.Element} The detail page including book info, navigation, and suggestions.
+ */
 function Detail() {
 
+    /**
+     * ID of the book extracted from the URL parameters.
+     * @type {string}
+     */
     const { id } = useParams(); // El id del libro desde la URL
+    
+    /**
+     * Navigation function to move between history entries.
+     * @type {function}
+     */
     const navigate = useNavigate(); 
 
     // Esto encuentra el libro correspondiente al id de la URL
+    /**
+     * The book object matching the ID from the URL.
+     * @type {Object|undefined}
+     */
     const book = books.find(book => book.id === Number(id)); 
 
+    /**
+     * A randomized selection of 3 books excluding the currently viewed one.
+     * @type {Array.<Object>}
+     */
     const otherBooks = books
         .filter(b => b.id !== book.id)
         .sort(() => Math.random() - 0.5)
         .slice(0, 3);
 
     // Esto hace que cuando se pulsa el link de un libro el scroll suba al inicio de la página para que la navegación se más cómoda
+    /**
+     * Effect that triggers a smooth scroll to the top of the window whenever the book ID changes.
+     */
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, [id]);

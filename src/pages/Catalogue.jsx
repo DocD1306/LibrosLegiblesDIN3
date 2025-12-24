@@ -4,14 +4,26 @@ import { Link } from "react-router-dom";
 import { useState, useMemo } from "react";
 import SearchBar from "../components/SearchBar.jsx";
 
-/*
-    Este componente representa el catálogo de libros.
-    Aquí se importa el array de libros desde data/books.js y se mapea para renderizar un componente Book por cada libro en el array.
-*/
+/**
+ * Catalogue component that displays a searchable list of books.
+ * * It handles the logic for filtering books based on a search term using 
+ * memoization for performance and renders a grid of accessible book links.
+ *
+ * @component
+ * @returns {JSX.Element} The book catalogue view with search functionality.
+ */
 function Catalogue(){
 
+    /**
+     * State for the current search input value.
+     * @type {string}
+     */
     const [searchTerm, setSearchTerm] = useState("");
 
+    /**
+     * Memoized list of books filtered by the title according to the search term.
+     * @type {Array.<Object>}
+     */
     const filteredBooks = useMemo(() => {
 
         if(!searchTerm) {
@@ -26,6 +38,10 @@ function Catalogue(){
 
     }, [searchTerm]);
 
+    /*
+        Este componente representa el catálogo de libros.
+        Aquí se importa el array de libros desde data/books.js y se mapea para renderizar un componente Book por cada libro en el array.
+    */
     return (
         <> 
             <h1 className="heading_h1 color_primary">Catálogo de libros</h1>

@@ -1,3 +1,15 @@
+/**
+ * A controlled search input component.
+ * * This component renders a styled search bar with accessibility features, 
+ * notifying the parent component of any input changes via a callback.
+ *
+ * @component
+ * @param {Object} props - Component properties.
+ * @param {string} props.searchTerm - The current value of the search input.
+ * @param {function(string): void} props.onSearchChange - Callback function triggered on every keystroke, receiving the new search string.
+ * @param {string} [props.placeholder="Buscar..."] - Optional text to display as a placeholder and accessible label.
+ * @returns {JSX.Element} A centered, responsive search input field.
+ */
 function SearchBar({ searchTerm, onSearchChange, placeholder = "Buscar..." }) {
     return (
         <div className="mb-8 w-full max-w-lg mx-auto">
@@ -19,4 +31,5 @@ function SearchBar({ searchTerm, onSearchChange, placeholder = "Buscar..." }) {
         </div>
     );
 }
+
 export default SearchBar;
